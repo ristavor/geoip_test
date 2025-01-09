@@ -37,7 +37,7 @@ jobs:
       - name: Build geoip.dat
         run: |
           cd geoip || exit 1
-          go run ./ -C ../config.json
+          go run ./
           cp -r output ..
           cd ../ && rm -rf geoip
 
