@@ -4,7 +4,7 @@
       "type": "v2rayGeoIPDat",
       "action": "add",
       "args": {
-        "uri": "https://github.com/Loyalsoldier/geoip/raw/release/geoip.dat",
+        "uri": "https://github.com/runetfreedom/russia-blocked-geoip/raw/release/geoip.dat",
         "wantedList": [
           "ru",
           "private",
@@ -13,7 +13,9 @@
           "google",
           "netflix",
           "telegram",
-          "twitter"
+          "twitter",
+          "ddos-guard",
+          "yandex"
         ]
       }
     },
