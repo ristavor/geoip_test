@@ -1,14 +1,13 @@
 {
   "input": [
     {
-      "type": "maxmindGeoLite2CountryCSV",
+      "type": "v2rayGeoIPDat",
       "action": "add",
       "args": {
-        "country": "./geolite2/GeoLite2-Country-Locations-en.csv",
-        "ipv4": "./geolite2/GeoLite2-Country-Blocks-IPv4.csv",
-        "ipv6": "./geolite2/GeoLite2-Country-Blocks-IPv6.csv",
+        "uri": "https://github.com/v2fly/geoip/raw/release/geoip.dat",
         "wantedList": [
-          "ru"
+          "ru",
+          "private"
         ]
       }
     },
@@ -25,10 +24,6 @@
       "args": {
         "uri": "https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/ipsum.lst"
       }
-    },
-    {
-      "type": "private",
-      "action": "add"
     }
   ],
   "output": [
