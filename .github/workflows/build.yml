@@ -38,6 +38,7 @@ jobs:
         run: |
           cd geoip || exit 1
           go run ./
+          ls
           cp -r ./output ..
           cd ../ && rm -rf geoip
 
