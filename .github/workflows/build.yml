@@ -16,6 +16,11 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout codebase
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - name: Checkout Loyalsoldier/geoip
         uses: actions/checkout@v4
         with:
@@ -39,6 +44,7 @@ jobs:
           cd geoip || exit 1
           go build ./
           ./geoip convert -c ../config.json
+          cp -r output ..
           cd ../ && rm -rf geoip
 
       - name: Generate sha256 checksum for dat files
