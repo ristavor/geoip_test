@@ -61,13 +61,6 @@ jobs:
           git remote add geoip "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git push -f geoip release
 
-      - name: Purge jsdelivr CDN
-        run: |
-          cd output || exit 1
-          for file in $(ls); do
-            curl -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/${file}"
-          done
-
       - name: Release and upload assets
         run: |
           gh release create ${{ env.TAG_NAME }} -t ${{ env.RELEASE_NAME }} \
