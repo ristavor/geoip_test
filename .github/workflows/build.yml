@@ -56,10 +56,10 @@ jobs:
           git add geoip.dat geoip.dat.sha256sum
           git commit -m "${{ env.RELEASE_NAME }}"
 
-          git remote remove geoip || true
-          git remote add geoip "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+          git remote remove origin || true
+          git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
 
-          git push -f geoip release
+          git push -f origin release
 
       - name: Upload assets to release
         run: |
