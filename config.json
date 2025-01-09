@@ -6,15 +6,30 @@
       "args": {
         "country": "./geolite2/GeoLite2-Country-Locations-en.csv",
         "ipv4": "./geolite2/GeoLite2-Country-Blocks-IPv4.csv",
-        "ipv6": "./geolite2/GeoLite2-Country-Blocks-IPv6.csv"
+        "ipv6": "./geolite2/GeoLite2-Country-Blocks-IPv6.csv",
+        "wantedList": [
+          "ru"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "action": "add",
+      "args": {
+        "name": "ru-blocked",
+        "uri": "https://community.antifilter.download/list/community.lst"
+      }
+    },
+    {
+      "type": "text",
+      "action": "add",
+      "args": {
+        "name": "ru-blocked",
+        "uri": "https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/ipsum.lst"
       }
     },
     {
       "type": "private",
-      "action": "add"
-    },
-    {
-      "type": "test",
       "action": "add"
     }
   ],
@@ -25,31 +40,6 @@
       "args": {
         "outputDir": "./output",
         "outputName": "geoip.dat"
-      }
-    },
-    {
-      "type": "v2rayGeoIPDat",
-      "action": "output",
-      "args": {
-        "outputDir": "./output",
-        "outputName": "geoip-only-cn-private.dat",
-        "wantedList": ["cn", "private"]
-      }
-    },
-    {
-      "type": "v2rayGeoIPDat",
-      "action": "output",
-      "args": {
-        "outputDir": "./output",
-        "oneFilePerList": true,
-        "wantedList": ["cn", "private", "test"]
-      }
-    },
-    {
-      "type": "v2rayGeoIPDat",
-      "action": "output",
-      "args": {
-        "oneFilePerList": true
       }
     },
     {
