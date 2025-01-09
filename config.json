@@ -15,6 +15,7 @@
       "type": "text",
       "action": "add",
       "args": {
+        "name": "ru-blocked",
         "uri": "https://community.antifilter.download/list/community.lst"
       }
     },
@@ -22,6 +23,7 @@
       "type": "text",
       "action": "add",
       "args": {
+        "name": "ru-blocked",
         "uri": "https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/ipsum.lst"
       }
     }
