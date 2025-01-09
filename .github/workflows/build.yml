@@ -19,10 +19,16 @@ jobs:
       - name: Checkout codebase
         uses: actions/checkout@v4
 
+      - name: Checkout v2fly/geoip
+        uses: actions/checkout@v4
+        with:
+          repository: v2fly/geoip
+          path: geoip
+
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version-file: go.mod
+          go-version-file: ./geoip/go.mod
 
       - name: Set variables
         run: |
@@ -32,7 +38,8 @@ jobs:
 
       - name: Build geoip.dat
         run: |
-          go run ./
+          go build -C geoip ./
+          ./geoip/geoip convert -c ./config.json
 
       - name: Generate sha256 checksum for dat files
         run: |
@@ -52,6 +59,13 @@ jobs:
           git commit -m "${{ env.RELEASE_NAME }}"
           git remote add geoip "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git push -f geoip release
+
+      - name: Purge jsdelivr CDN
+        run: |
+          cd output || exit 1
+          for file in $(ls); do
+            curl -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/${file}"
+          done
 
       - name: Release and upload assets
         run: |
