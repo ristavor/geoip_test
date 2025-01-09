@@ -38,7 +38,7 @@ jobs:
         run: |
           cd geoip || exit 1
           go run ./
-          cp -r output ..
+          cp -r ./output ..
           cd ../ && rm -rf geoip
 
       - name: Generate sha256 checksum for dat files
