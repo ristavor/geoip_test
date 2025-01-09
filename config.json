@@ -7,7 +7,13 @@
         "uri": "https://github.com/Loyalsoldier/geoip/raw/release/geoip.dat",
         "wantedList": [
           "ru",
-          "private"
+          "private",
+          "cloudflare",
+          "facebook",
+          "google",
+          "netflix",
+          "telegram",
+          "twitter"
         ]
       }
     },
