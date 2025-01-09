@@ -16,9 +16,6 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout codebase
-        uses: actions/checkout@v4
-
       - name: Checkout Loyalsoldier/geoip
         uses: actions/checkout@v4
         with:

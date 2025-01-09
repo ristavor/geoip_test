@@ -4,7 +4,7 @@
       "type": "v2rayGeoIPDat",
       "action": "add",
       "args": {
-        "uri": "https://github.com/v2fly/geoip/raw/release/geoip.dat",
+        "uri": "https://github.com/Loyalsoldier/geoip/raw/release/geoip.dat",
         "wantedList": [
           "ru",
           "private"
