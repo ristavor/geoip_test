@@ -19,10 +19,10 @@ jobs:
       - name: Checkout codebase
         uses: actions/checkout@v4
 
-      - name: Checkout v2fly/geoip
+      - name: Checkout Loyalsoldier/geoip
         uses: actions/checkout@v4
         with:
-          repository: v2fly/geoip
+          repository: Loyalsoldier/geoip
           path: geoip
 
       - name: Set up Go
