@@ -36,11 +36,8 @@ jobs:
 
       - name: Build geoip.dat
         run: |
-          cd geoip || exit 1
-          go run ./
-          ls
-          cp -r ./output ..
-          cd ../ && rm -rf geoip
+          go build -C geoip ./
+          ./geoip/geoip convert -c ./config.json
 
       - name: Generate sha256 checksum for dat files
         run: |
