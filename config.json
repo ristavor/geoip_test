@@ -7,17 +7,7 @@
         "uri": "https://github.com/runetfreedom/russia-blocked-geoip/raw/release/geoip.dat",
         "wantedList": [
           "ru",
-          "private",
-          "cloudflare",
-          "cloudfront",
-          "facebook",
-          "fastly",
-          "google",
-          "netflix",
-          "telegram",
-          "twitter",
-          "ddos-guard",
-          "yandex"
+          "private"
         ]
       }
     },
