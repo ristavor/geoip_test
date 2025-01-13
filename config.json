@@ -9,6 +9,16 @@
           "ru",
           "by",
           "kz",
+          "cloudflare",
+          "cloudfront",
+          "facebook",
+          "fastly",
+          "google",
+          "netflix",
+          "telegram",
+          "twitter",
+          "ddos-guard",
+          "yandex",
           "private"
         ]
       }
